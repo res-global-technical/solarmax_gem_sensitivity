@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "portfolio-sensitivity-prototype"
+name = "solarmax-sensitivity-prototype"
 version = "0.1.0"
 description = ""
-authors = ["RDonnelly88 <ross.donnelly@res-ltd.com>"]
+authors = ["jonathan.newton@res-group.com"]
 readme = "README.md"
 package-mode = false
 
