@@ -52,7 +52,6 @@ For Client ID and Secret please contact [Ross Donnelly](Ross.Donnelly@res-group.
 Add a JSON file (e.g., `my_sensitivity.json`) to the `examples/` folder.
 
 The `examples/Sesntivity Set Up.xlsx` file and `src/helpers/excel_to_sensitivity_json.py` script can be used to generate this. See instructions in `examples/Sesntivity Set Up.xlsx` 
-```
 
 **Note:** Currently supported components and their available sensitivity types can be found in the below table:
 
@@ -67,25 +66,26 @@ The `examples/Sesntivity Set Up.xlsx` file and `src/helpers/excel_to_sensitivity
 | `operational_life_time` |  | ✓ |  |  |
 | `financial_close_date` |  | ✓ |  |  |
 
+
 ### 3. Define Solarmax Designs
 Add a JSON file (e.g. `my_designs.json` to the `designs/` folder, see example `designs/design_options.json`
 
-You can download solarmax CSV
+You can download solarmax results csv files for each project of interest and update the inputs in the `src/helpers/excel_to_sensitivity_json.py` script with project IDs, Solarmax csv names and GEM assessment IDs to populate the json file automatically
 
 ## Running Locally
 
-### 1. Update `main.py`
+### 1. Update `solarmax_sensitivity.py`
 Set the `ANALSYSIS_NAME` variable in `main.py` to point to your sensitivity JSON file (e.g., `examples/my_sensitivity.json`).
 
 ### 2. Run the Script
 To execute the analysis:
 ```bash
-python main.py
+python solarmax_sensitivity.py
 ```
 
 or as a background process
 ```bash
-python main.py &
+python solarmax_sensitivity.py &
 ```
 
 Follow the log for status updates and estimated completion time e.g.:
@@ -95,12 +95,21 @@ Get-Content .\application.log -Wait -Tail 1000
 
 
 ## How It Works
-The script creates an element-wise parameter sweep of all specified parameter sweeps and their values. For example, if two sweeps with values `[A1, A2, A3]` and `[B1, B2, B3]` are defined, the script generates:
+The script creates an either an independent parameter sweep or an element-wise parameter sweep of all specified parameter sweeps and their values depending on input selected in `examples/Sesntivity Set Up.xlsx` . 
+
+For example, if two sweeps with values `[A1, A2, A3]` and `[B1, B2, B3]` are defined, and Linked is selected in `examples/Sesntivity Set Up.xlsx` the script generates:
 ```plaintext
 (A1, B1), (A1, B2), (A1, B3),
 (A2, B1), (A2, B2), (A2, B3),
 (A3, B1), (A3, B2), (A3, B3)
 ```
+
+Whereas, if Independent is selected in `examples/Sesntivity Set Up.xlsx` the script generates
+```plaintext
+(A1, B0), (A2, B0), (A3, B0),
+(A0, B1), (A0, B2), (A0, B3)
+```
+Where A0 and B0 are the default paramter values in the GEM assessment for those parameters
 
 ## Additional Notes
 
