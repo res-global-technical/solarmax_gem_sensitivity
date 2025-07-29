@@ -1,13 +1,13 @@
 # Prototype GEM Sensitivity
 
-Scripts to perform a Sensitivity across a porfolio in GEM.
+Scripts to perform a Technoeconomic Sensitivity Assessment from SolarMAX projects
 
 Utilises [GEM Engine Function App](https://portal.azure.com/#@reshive.onmicrosoft.com/resource/subscriptions/0b17f9dd-4b32-445d-a304-45bff0dd4e0b/resourceGroups/gem-calculation-engine-rg/providers/Microsoft.Web/sites/gem-calculation-engine/appServices)
 
 
 # Getting Started
 
-This project allows you to run sensitivity analyses across multiple GEM assessments. Below is a step-by-step guide to set up and execute the tool locally.
+This project allows you to run sensitivity analyses across multiple SolarMAX assessments. Below is a step-by-step guide to set up and execute the tool locally.
 
 
 ## Prerequisites
@@ -44,34 +44,14 @@ GEM_API_BASE_URL="https://www.res-gem.com/api"
 GEM_CLIENT_ID=""
 GEM_CLIENT_SECRET=""
 ```
-- **GEM_CHUNK_SIZE**: Maximum recommended value is `1000` due to concurrency limits on Engine Function App.  
+- **GEM_CHUNK_SIZE**: Maximum recommended value is `1000` due to concurrency limits on Engine Function App.
+
+For Client ID and Secret please contact [Ross Donnelly](Ross.Donnelly@res-group.com)
 
 ### 2. Define Sensitivity JSON
-Add a JSON file (e.g., `my_sensitivity.json`) to the `examples/` folder. Here’s an example:
+Add a JSON file (e.g., `my_sensitivity.json`) to the `examples/` folder.
 
-```json
-{
-  "folder": "GEM_FOLDER_OF_INTEREST",
-  "technologies": [
-    "TECHNOLOGIES_OF_INTEREST"
-  ],
-  "sensitivities": {
-    "ScenarioName": {
-      "element_wise_parameter_sweep": {
-        "SweepA": {
-          "component": "COMPONENT_NAME",
-          "type": "percentage_adjustment",
-          "values": [10, 20, 30]
-        },
-        "SweepB": {
-          "component": "COMPONENT_NAME",
-          "type": "percentage_adjustment",
-          "values": [5, 15, 25]
-        }
-      }
-    }
-  }
-}
+The `examples/Sesntivity Set Up.xlsx` file and `src/helpers/excel_to_sensitivity_json.py` script can be used to generate this. See instructions in `examples/Sesntivity Set Up.xlsx` 
 ```
 
 **Note:** Currently supported components and their available sensitivity types can be found in the below table:
@@ -87,6 +67,10 @@ Add a JSON file (e.g., `my_sensitivity.json`) to the `examples/` folder. Here’
 | `operational_life_time` |  | ✓ |  |  |
 | `financial_close_date` |  | ✓ |  |  |
 
+### 3. Define Solarmax Designs
+Add a JSON file (e.g. `my_designs.json` to the `designs/` folder, see example `designs/design_options.json`
+
+You can download solarmax CSV
 
 ## Running Locally
 
