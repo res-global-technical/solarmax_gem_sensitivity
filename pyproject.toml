@@ -1,0 +1,67 @@
+[tool.poetry]
+name = "portfolio-sensitivity-prototype"
+version = "0.1.0"
+description = ""
+authors = ["RDonnelly88 <ross.donnelly@res-ltd.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+requests = "^2.32.3"
+resgem = {git = "https://github.com/resgroup/gem-api-python-client", rev = "v0.6.4"}
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.6.1"
+pydantic = "^2.10.3"
+httpx = "^0.28.1"
+asyncio = "^3.4.3"
+tenacity = "^9.0.0"
+openpyxl = "^3.1.5"
+types-python-dateutil = "^2.9.0.20241206"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+ruff = "^0.6.1"
+poethepoet = "^0.27.0"
+mypy = "^1.11.1"
+types-PyYAML = "^6.0.0"
+types-requests = "^2.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+exclude = ["old"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "Q", "UP", "I", "N"]
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = ["old"]
+disallow_untyped_defs = true
+
+[tool.poe.tasks]
+
+[tool.poe.tasks.types]
+help = "Run the type checker"
+cmd  = "poetry run mypy ."
+
+[tool.poe.tasks.lint]
+help = "Run linting tools on the code base"
+cmd  = "ruff check ."
+
+[tool.poe.tasks.format-ruff]
+help = "Run ruff fixer on code base"
+cmd = "ruff check . --fix-only"
+
+[tool.poe.tasks.check]
+help = "Check code"
+sequence = [
+    { ref = "lint" },
+    { ref = "types" },
+]

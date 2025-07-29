@@ -1,0 +1,147 @@
+{
+    "folder": "3315",
+    "technologies": [
+        "solar"
+    ],
+    "sensitivities": {
+        "discount_rate_sweep": {
+            "element_wise_parameter_sweep": {
+                "discount_rate": {
+                    "component": "discount_rate",
+                    "type": "override_value",
+                    "values": [
+                        0.04,
+                        0.045,
+                        0.05,
+                        0.055,
+                        0.06,
+                        0.065,
+                        0.07,
+                        0.075,
+                        0.08,
+                        0.085,
+                        0.09,
+                        0.095,
+                        0.1
+                    ]
+                }
+            }
+        },
+        "power_price_sweep": {
+            "element_wise_parameter_sweep": {
+                "power_price": {
+                    "component": "power_prices",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        -0.2,
+                        -0.15,
+                        -0.1,
+                        -0.05,
+                        0,
+                        0.05,
+                        0.1,
+                        0.15,
+                        0.2
+                    ]
+                }
+            }
+        },
+        "energy_yield_sweep": {
+            "element_wise_parameter_sweep": {
+                "energy_yield": {
+                    "component": "energy_yield",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        -0.1,
+                        -0.08,
+                        -0.06,
+                        -0.04,
+                        -0.02,
+                        0,
+                        0.02,
+                        0.04,
+                        0.06,
+                        0.08,
+                        0.1
+                    ]
+                }
+            }
+        },
+        "capex_sensitivity": {
+            "element_wise_parameter_sweep": {
+                "all_capex": {
+                    "component": "all_capex",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        -0.2,
+                        -0.15,
+                        -0.1,
+                        -0.05,
+                        0,
+                        0.05,
+                        0.1,
+                        0.15,
+                        0.2
+                    ]
+                }
+            }
+        },
+        "opex_sensitivity": {
+            "element_wise_parameter_sweep": {
+                "all_opex": {
+                    "component": "all_opex",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        -0.15,
+                        -0.1,
+                        -0.05,
+                        0,
+                        0.05,
+                        0.1,
+                        0.15
+                    ]
+                }
+            }
+        },
+        "fid_sensitivity": {
+            "element_wise_parameter_sweep": {
+                "fid": {
+                    "component": "financial_close_date",
+                    "type": "generic_adder",
+                    "values": [
+                        -12,
+                        -9,
+                        -6,
+                        -3,
+                        0,
+                        3,
+                        6,
+                        9,
+                        12
+                    ]
+                }
+            }
+        },
+        "operational_lifetime_sensitivity": {
+            "element_wise_parameter_sweep": {
+                "operational_lifetime": {
+                    "component": "operational_life_time",
+                    "type": "generic_adder",
+                    "values": [
+                        -5,
+                        -4,
+                        -3,
+                        -2,
+                        -1,
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "folder": "emea",
+    "technologies": [
+        "wind",
+        "solar",
+        "storage"
+    ],
+    "sensitivities": {
+        "example_element_wise_sensitivity": {
+            "element_wise_parameter_sweep": {
+                "discount_rate_sensitivity": {
+                    "component": "discount_rate",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        0,
+                        -0.005,
+                        0.005,
+                        -0.01,
+                        0.01,
+                        -0.015,
+                        0.015,
+                        -0.02,
+                        0.02,
+                        -0.025,
+                        0.025
+                    ]
+                },
+                "capex_items_sensitivity": {
+                    "component": "all_capex",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        0,
+                        -0.05,
+                        0.05,
+                        -0.1,
+                        0.1,
+                        -0.15,
+                        0.15,
+                        -0.2,
+                        0.2
+                    ]
+                },
+                "electricity_price_sensitivity": {
+                    "component": "power_prices",
+                    "type": "percentage_adjustment",
+                    "values": [
+                        0,
+                        -0.01,
+                        0.01,
+                        -0.05,
+                        0.05,
+                        -0.1,
+                        0.1,
+                        -0.15,
+                        0.15,
+                        -0.2,
+                        0.2,
+                        -0.25,
+                        0.25
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    code-quality:
+        name: Check code quality
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install poetry
+              run: pipx install poetry
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.12'
+                cache: poetry
+
+            
+            - name: Set git commit PAT
+              run: |
+                git config --global url."https://$COMMITTER_TOKEN@github.com/".insteadOf "https://github.com/"
+              env: 
+                COMMITTER_TOKEN: ${{ secrets.API_CLIENT_PAT_TOKEN }}
+        
+            
+            - name: Install dependencies
+              run: poetry install
+            
+            - name: Run linting
+              run: poetry run poe lint
+
+            - name: Run type checking
+              run: poetry run poe types

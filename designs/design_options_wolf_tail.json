@@ -1,0 +1,192 @@
+{
+    "project_assessments": [
+        {
+            "project_id": 22684,
+            "assessment_id": "01jwxa4za0bgm2y1shg9grhhks"
+        }
+    ],
+    "designs": {
+        "22684": [
+            {
+                "name": "2",
+                "installed_capacity_dc": 125.00649,
+                "land_area": 1120.7271082074092,
+                "energy_yield": 245986.32230754988
+            },
+            {
+                "name": "3",
+                "installed_capacity_dc": 125.00649,
+                "land_area": 933.9392568395076,
+                "energy_yield": 242827.29230410527
+            },
+            {
+                "name": "4",
+                "installed_capacity_dc": 130.00743,
+                "land_area": 1165.5622925607875,
+                "energy_yield": 253893.1265585498
+            },
+            {
+                "name": "5",
+                "installed_capacity_dc": 125.00649,
+                "land_area": 800.5193630052925,
+                "energy_yield": 239668.73051595635
+            },
+            {
+                "name": "6",
+                "installed_capacity_dc": 130.00743,
+                "land_area": 971.301910467323,
+                "energy_yield": 250667.29905915403
+            },
+            {
+                "name": "7",
+                "installed_capacity_dc": 135.00836999999999,
+                "land_area": 1210.397476914166,
+                "energy_yield": 260979.68479368332
+            },
+            {
+                "name": "8",
+                "installed_capacity_dc": 125.00649,
+                "land_area": 700.4544426296308,
+                "energy_yield": 236401.94175224865
+            },
+            {
+                "name": "9",
+                "installed_capacity_dc": 130.00743,
+                "land_area": 832.544494686277,
+                "energy_yield": 247436.32288971377
+            },
+            {
+                "name": "10",
+                "installed_capacity_dc": 135.00836999999999,
+                "land_area": 1008.6645640951384,
+                "energy_yield": 257700.2197001891
+            },
+            {
+                "name": "11",
+                "installed_capacity_dc": 125.00649,
+                "land_area": 622.6261712263383,
+                "energy_yield": 232779.1584219458
+            },
+            {
+                "name": "12",
+                "installed_capacity_dc": 130.00743,
+                "land_area": 728.4764328504923,
+                "energy_yield": 244093.60614846644
+            },
+            {
+                "name": "13",
+                "installed_capacity_dc": 140.00931,
+                "land_area": 1255.2326612675447,
+                "energy_yield": 267265.7199892396
+            },
+            {
+                "name": "14",
+                "installed_capacity_dc": 135.00836999999999,
+                "land_area": 864.5696263672615,
+                "energy_yield": 254415.37141717316
+            },
+            {
+                "name": "15",
+                "installed_capacity_dc": 130.00743,
+                "land_area": 647.5346069782153,
+                "energy_yield": 240379.59694848466
+            },
+            {
+                "name": "16",
+                "installed_capacity_dc": 140.00931,
+                "land_area": 1046.0272177229538,
+                "energy_yield": 263937.3622843707
+            },
+            {
+                "name": "17",
+                "installed_capacity_dc": 135.00836999999999,
+                "land_area": 756.4984230713537,
+                "energy_yield": 251013.27558893978
+            },
+            {
+                "name": "18",
+                "installed_capacity_dc": 145.01024999999998,
+                "land_area": 1300.0678456209228,
+                "energy_yield": 272890.40376954
+            },
+            {
+                "name": "19",
+                "installed_capacity_dc": 140.00931,
+                "land_area": 896.5947580482461,
+                "energy_yield": 260601.15402729297
+            },
+            {
+                "name": "20",
+                "installed_capacity_dc": 135.00836999999999,
+                "land_area": 672.4430427300922,
+                "energy_yield": 247227.86928804425
+            },
+            {
+                "name": "21",
+                "installed_capacity_dc": 145.01024999999998,
+                "land_area": 1083.389871350769,
+                "energy_yield": 269518.3013189962
+            },
+            {
+                "name": "22",
+                "installed_capacity_dc": 140.00931,
+                "land_area": 784.5204132922154,
+                "energy_yield": 257143.05491160604
+            },
+            {
+                "name": "23",
+                "installed_capacity_dc": 145.01024999999998,
+                "land_area": 928.6198897292306,
+                "energy_yield": 266139.11080060585
+            },
+            {
+                "name": "24",
+                "installed_capacity_dc": 150.01119,
+                "land_area": 1344.9030299743015,
+                "energy_yield": 277901.74942973873
+            },
+            {
+                "name": "25",
+                "installed_capacity_dc": 140.00931,
+                "land_area": 697.3514784819691,
+                "energy_yield": 253298.31417151963
+            },
+            {
+                "name": "26",
+                "installed_capacity_dc": 145.01024999999998,
+                "land_area": 812.5424035130767,
+                "energy_yield": 262641.4846277795
+            },
+            {
+                "name": "27",
+                "installed_capacity_dc": 150.01119,
+                "land_area": 1120.7525249785847,
+                "energy_yield": 274477.51741022227
+            },
+            {
+                "name": "28",
+                "installed_capacity_dc": 150.01119,
+                "land_area": 960.6450214102155,
+                "energy_yield": 271049.08816168876
+            },
+            {
+                "name": "29",
+                "installed_capacity_dc": 145.01024999999998,
+                "land_area": 722.259914233846,
+                "energy_yield": 258750.14040397966
+            },
+            {
+                "name": "30",
+                "installed_capacity_dc": 150.01119,
+                "land_area": 840.5643937339385,
+                "energy_yield": 267533.8768824943
+            },
+            {
+                "name": "31",
+                "installed_capacity_dc": 150.01119,
+                "land_area": 747.168349985723,
+                "energy_yield": 263610.274556885
+            }
+        ]
+    }
+}
