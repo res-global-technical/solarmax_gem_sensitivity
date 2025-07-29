@@ -19,6 +19,7 @@ asyncio = "^3.4.3"
 tenacity = "^9.0.0"
 openpyxl = "^3.1.5"
 types-python-dateutil = "^2.9.0.20241206"
+pkginfo = "1.12"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.2"
