@@ -6,9 +6,16 @@ import numpy as np
 from openpyxl import load_workbook
 import os
 
+cwd = os.getcwd()
+wd = os.path.abspath(os.path.join(cwd, os.pardir))
+new_cwd = os.path.abspath(os.path.join(wd, os.pardir))
 
-excel_file = r'C:\Users\JNewton\Documents\GitHub\portfolio-sensitivity-prototype\examples\Sensitivity Set Up.xlsx'
-output_json = r'C:\Users\JNewton\Documents\GitHub\portfolio-sensitivity-prototype\examples\sensitivity_set_up.json'
+os.chdir(new_cwd)
+
+print(f"Current working directory: {os.getcwd()}")
+
+excel_file = r'examples\Sensitivity Set Up.xlsx'
+output_json = r'examples\sensitivity_set_up.json'
 technologies = ["solar"]
 folder = "3315"
 
@@ -21,7 +28,6 @@ def get_sweep_type(file_path: str) -> str:
     sweep_type = sh.cell(row=3, column=2).value
     if sweep_type not in ["Independent", "Linked"]:
         raise ValueError(f"Invalid sweep type: {sweep_type}. Expected 'Independent' or 'Linked'.")
-    print(f"Sweep type: {sweep_type}")
     return sweep_type
 
 def read_excel_file(file_path: str) -> pd.DataFrame:
